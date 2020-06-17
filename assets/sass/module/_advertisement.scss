@@ -3,7 +3,6 @@
 	background-color: #FFF;
 	
 	.wrapper {
-		width: 82%;
 		@include flex(nowrap,row,space-between,center,center);
 	}
 

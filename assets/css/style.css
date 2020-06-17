@@ -127,7 +127,7 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 84%;
+  width: 82%;
   margin: 0 auto;
 }
 
@@ -252,7 +252,6 @@ header .wrapper h1 + ul {
 }
 
 .advertisement .wrapper {
-  width: 82%;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -292,4 +291,31 @@ header .wrapper h1 + ul {
 
 body {
   background-color: #f6f6f7;
+}
+
+.navigation {
+  padding: 1.4% 0;
+}
+
+.navigation ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.navigation a {
+  color: #3e768b;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: -1px;
+  text-decoration: underline;
+}
+
+.navigation .hamburger {
+  padding: 12.5px;
+  background-color: #000;
 }

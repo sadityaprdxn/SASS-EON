@@ -1,0 +1,18 @@
+.navigation {
+	padding: 1.4% 0;
+
+	ul {
+		@include flex(nowrap,row,space-between,center,center)	
+	}
+
+	a {
+		@include textcharacteristics(#3e768b,15px,700,capitalize);
+		letter-spacing: -1px;
+		text-decoration: underline;
+	}
+
+	.hamburger {
+		padding: 12.5px;
+		background-color: #000;
+	}
+}
