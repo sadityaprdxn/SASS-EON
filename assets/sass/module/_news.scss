@@ -1,0 +1,147 @@
+.news {
+
+	article {
+		width: 23.3%;
+		margin-bottom: 2.1%;
+		background-color: #FFF;
+		float: right;
+
+		&:nth-child(2) .article-image {
+			background: url('../images/Rectangle.png') 50% 50% no-repeat;
+			background-size: cover;
+			height: 175px;
+		}
+
+		&:nth-child(3) {
+			 img { width: 40%;}
+		
+			.article-image {
+				background: url('../images/2.jpg') 50% 50% no-repeat;
+				background-size: cover;
+				height: 175px;
+			}
+		}
+
+		&:nth-child(4) .article-image {
+			background: url('../images/Home_img-e1533629478865-1.jpg') 50% 50% no-repeat;
+			background-size: cover;
+			height: 175px;
+		}
+
+		&.active {
+			padding-bottom: 31.8%;
+			float: left;
+			width: 74.45%;
+			height: 100%;
+
+			.article-content {
+				padding: 5.5% 3.5%;
+			}
+
+			h2 {
+				padding-bottom: 4.5%;
+				@include textcharacteristics(#3e768b,30px,500);
+				letter-spacing: -2px;
+				word-spacing: -2px;
+				text-decoration: none;
+			}
+
+			p {
+				@include textcharacteristics(rgba(0,0,0,0.6),17px,600,null,25px);
+				letter-spacing: -0.5px;
+			}
+
+			.social-icon {
+				padding-top: 7%;
+				@include flex(nowrap,row,flex-end,center,center);
+
+				li {
+					padding: 0 6.5px;
+
+					&:last-child {
+						padding-right: 0;
+					}
+				}
+			}
+
+			.linked-in,
+			.twitter,
+			.mail,
+			.facebook { 
+				width: 46px;
+				height: 46px;
+				text-indent: -9999px;
+				position: relative;
+				background-color: rgba(0,0,0,0.4);
+				border-radius: 50%;
+
+				&::before {
+					position: absolute;
+					font-family: "fontAwesome";
+					top: 50%;
+					left: 50%;
+					font-size: 35px;
+					transform: translateX(-50%) translateY(-50%);
+					color: #FFF;
+				}
+			}
+
+			.linked-in::before { 
+				content: '\f0e1';
+				text-indent: 0;
+			}
+			.twitter::before { 
+				content: '\f099';
+				text-indent: 0;
+			}
+
+			.mail::before { 
+				content: '\f0e0';
+				text-indent: 0;
+			}
+
+			.facebook::before { 
+				content: '\f09a';
+				text-indent: 0;
+			}
+
+		}
+	}
+}
+
+
+
+.article-content {
+	padding: 2.8% 6% 3.5%;
+	box-sizing: border-box;
+
+	span {
+		@include textcharacteristics(#000,12px,500);
+	}
+
+	img {
+		width: 33.5%;
+		padding: 1% 0 8%;
+	}
+
+	h2 {
+		padding-bottom: 4%;
+		@include textcharacteristics(#3e768b,15px,600,none,22px);
+		letter-spacing: -1px;
+		text-decoration: underline;
+		cursor: pointer;
+		@include transition(0.3s);
+
+		&:hover {
+			color: red;
+		}
+	}
+
+	p {
+		@include textcharacteristics(rgba(0,0,0,0.6),12px,700,null,20px);
+		letter-spacing: -0.5px;
+		word-spacing: -1px;
+	}
+}
+
+

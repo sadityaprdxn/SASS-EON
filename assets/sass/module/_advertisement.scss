@@ -10,6 +10,11 @@
 		@include textcharacteristics(#000,14px,800,uppercase);
 		letter-spacing: -1px;
 		text-decoration: underline;
+		@include transition(0.3s);
+
+		&:hover {
+			color: red;
+		}
 	}
 
 	span {
