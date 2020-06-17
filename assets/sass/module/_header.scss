@@ -1,0 +1,97 @@
+header {
+	background-color: #383E42;
+
+	.wrapper {
+		position: relative;
+		width: 93.5%;
+
+		h1 { display: inline-block;}
+
+		nav {
+			display: inline-block;
+
+			a {
+				color: rgba(255,255,255,0.5);
+				@include textcharacteristics(rgba(255,255,255,0.5),15px,400);
+				letter-spacing: -1px;
+				padding: 10px 25px;
+				@include transition(0.3s);
+				border-radius: 5px;
+
+				&:hover {
+					background-color: rgba(255,255,255,0.2);
+					color: #FFF;
+				}
+			}
+
+
+			ul:last-child {
+				@include position(absolute,0,50%,0,auto,auto);
+				@include transform(translateY(-52%));
+				@include flex(nowrap,row,space-between,center,center);
+			}
+		}
+	}
+}
+
+
+header .wrapper ul:last-child {
+
+	a {
+		padding: 10px 32px;
+
+		&.log-in {
+			position: relative;
+			padding: 10px 16px 10px 22px;
+		}
+	}
+}
+
+.log-in span {
+	display: block;
+
+	&:last-child {
+		color: #EDC133;
+	}
+}
+
+.topics-section::after,
+.more-section::after {
+	content: '\f078';
+	font-family: "fontAwesome";
+	// display: inline;
+	color: rgba(255,255,255,0.5);
+	font-size: 15px;
+	padding: 7px;
+}
+
+
+.log-in::after {
+	@extend .more-section::after ;
+	@include position(absolute,0,50%,-9%,auto,auto);
+	@include transform(translateY(-50%));
+}
+
+.log-in::before {
+	content: '\f007';
+	font-family: "fontAwesome";
+	color: #FFF;
+	font-size: 15px;
+	padding: 7px;
+	@include position(absolute,0,50%,auto,auto,-2%);
+	@include transform(translateY(-50%));
+}
+
+.search::before {
+	content: '\f002';
+	font-family: "fontAwesome";
+	color: #FFF;
+	font-size: 14px;
+	padding: 11px;
+}
+
+.search + input,
+header .hamburger,
+header .wrapper h1 + ul {
+  display: none;
+}

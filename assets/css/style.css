@@ -130,3 +130,118 @@ li {
   width: 84%;
   margin: 0 auto;
 }
+
+header {
+  background-color: #383E42;
+}
+
+header .wrapper {
+  position: relative;
+  width: 93.5%;
+}
+
+header .wrapper h1 {
+  display: inline-block;
+}
+
+header .wrapper nav {
+  display: inline-block;
+}
+
+header .wrapper nav a {
+  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  padding: 10px 25px;
+  transition: 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+header .wrapper nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFF;
+}
+
+header .wrapper nav ul:last-child {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  transform: translateY(-52%);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+header .wrapper ul:last-child a {
+  padding: 10px 32px;
+}
+
+header .wrapper ul:last-child a.log-in {
+  position: relative;
+  padding: 10px 16px 10px 22px;
+}
+
+.log-in span {
+  display: block;
+}
+
+.log-in span:last-child {
+  color: #EDC133;
+}
+
+.topics-section::after,
+.more-section::after,
+.log-in::after {
+  content: '\f078';
+  font-family: "fontAwesome";
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  padding: 7px;
+}
+
+.log-in::after {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: -9%;
+  bottom: auto;
+  left: auto;
+  transform: translateY(-50%);
+}
+
+.log-in::before {
+  content: '\f007';
+  font-family: "fontAwesome";
+  color: #FFF;
+  font-size: 15px;
+  padding: 7px;
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: -2%;
+  transform: translateY(-50%);
+}
+
+.search::before {
+  content: '\f002';
+  font-family: "fontAwesome";
+  color: #FFF;
+  font-size: 14px;
+  padding: 11px;
+}
+
+.search + input,
+header .hamburger,
+header .wrapper h1 + ul {
+  display: none;
+}
